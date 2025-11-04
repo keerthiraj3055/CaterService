@@ -1,0 +1,259 @@
+/* Corporate Dashboard Styles */
+.corporate-dashboard {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.corporate-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.corporate-nav {
+  position: sticky;
+  top: 80px;
+  z-index: 999;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.corporate-main-content {
+  height: calc(100vh - 160px);
+  overflow-y: auto;
+  background-color: #FFFFFF;
+  padding: 24px;
+}
+
+/* Ensure proper spacing */
+.corporate-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Card styles */
+.corporate-card {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.corporate-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Navigation styles */
+.corporate-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #6B7280;
+  text-decoration: none;
+}
+
+.corporate-nav-item:hover {
+  background-color: #F9FAFB;
+  color: #1F2937;
+}
+
+.corporate-nav-item.active {
+  background-color: #F3F4F6;
+  color: #1F2937;
+}
+
+/* Typography */
+.corporate-title {
+  font-weight: bold;
+  color: #000000;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+
+.corporate-subtitle {
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.corporate-text {
+  color: #000000;
+  font-weight: 500;
+}
+
+.corporate-text-muted {
+  color: #6B7280;
+}
+
+/* Stats cards */
+.corporate-stat-card {
+  height: 100%;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.corporate-stat-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.corporate-stat-value {
+  font-weight: bold;
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.corporate-stat-title {
+  color: #6B7280;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.corporate-stat-subtitle {
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+/* Activity items */
+.corporate-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #F9FAFB;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.corporate-activity-item:hover {
+  background-color: #F3F4F6;
+}
+
+.corporate-activity-icon {
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Table styles */
+.corporate-table {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.corporate-table-header {
+  background-color: #F9FAFB;
+  font-weight: 600;
+  color: #000000;
+}
+
+.corporate-table-cell {
+  border-bottom: 1px solid #F3F4F6;
+  padding: 16px;
+}
+
+/* Chart styles */
+.corporate-chart {
+  height: 300px;
+}
+
+.corporate-chart-container {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .corporate-main-content {
+    padding: 16px;
+  }
+  
+  .corporate-content-wrapper {
+    padding: 0;
+  }
+  
+  .corporate-title {
+    font-size: 24px;
+  }
+  
+  .corporate-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .corporate-nav-item {
+    white-space: nowrap;
+  }
+}
+
+/* Dark mode support */
+[data-theme="dark"] .corporate-dashboard {
+  background-color: #0F172A;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .corporate-header,
+[data-theme="dark"] .corporate-nav {
+  background-color: #1E293B;
+  border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .corporate-main-content {
+  background-color: #0F172A;
+}
+
+[data-theme="dark"] .corporate-card {
+  background-color: #1E293B;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .corporate-title,
+[data-theme="dark"] .corporate-text {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .corporate-subtitle,
+[data-theme="dark"] .corporate-text-muted {
+  color: #94A3B8;
+}
+
+/* Loading states */
+.corporate-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #6B7280;
+}
+
+/* Animation improvements */
+.corporate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
